@@ -49,8 +49,30 @@ def palindrome_sentence(sentence):
     # return string[::-1].casefold() == string.casefold()
     return is_palindrome(string)
 
-word = input("please enter a word to check: ")
-if palindrome_sentence(word):
-    print("'{}' is a palindrome".format(word))
-else:
-    print("'{}' is not a palindrome".format(word))
+
+def fibonacci(n):
+    """
+    Calculate the nth Fibonacci number.
+
+    The Fibonacci sequence is defined as:
+    - F(0) = 0
+    - F(1) = 1
+    - F(n) = F(n-1) + F(n-2) for n > 1
+
+    :param n: The position in the Fibonacci sequence to calculate (0-indexed).
+    :type n: int
+    :return: The nth Fibonacci number.
+    :rtype: int
+    :raises ValueError: If n is negative.
+    """
+    if n < 0:
+        raise ValueError("n must be a non-negative integer.")
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
