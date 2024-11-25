@@ -1,4 +1,4 @@
-def multiply(x, y):
+def multiply(x: float, y: float) -> float:
     """
     Multiply two numbers and return the result.
 
@@ -13,7 +13,7 @@ def multiply(x, y):
     return result
 
 
-def is_palindrome(string):
+def is_palindrome(string:str) -> bool:
     """
     Check if a given string is a palindrome.
 
@@ -29,7 +29,7 @@ def is_palindrome(string):
     return string[::-1].casefold() == string.casefold()
 
 
-def palindrome_sentence(sentence):
+def palindrome_sentence(sentence: str) -> bool:
     """
     Check if a sentence is a palindrome, considering only alphanumeric characters.
 
@@ -50,7 +50,7 @@ def palindrome_sentence(sentence):
     return is_palindrome(string)
 
 
-def fibonacci(n):
+def fibonacci(n: int) -> int:
     """
     Calculate the nth Fibonacci number.
 
